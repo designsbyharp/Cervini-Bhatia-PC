@@ -1,0 +1,4 @@
+ new CleanWebpackPlugin('dist')
+
+//multiple folders
+ new CleanWebpackPlugin(['dist', 'other'])

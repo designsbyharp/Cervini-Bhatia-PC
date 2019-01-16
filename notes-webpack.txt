@@ -1,0 +1,31 @@
+Webpack steps:
+
+Installing:
+
+1. create package.json file:
+    npm init -y for no custom info
+    or npm init for custom info
+
+2. install webpack as development dependency:
+   npm install webpack webpack-cli --save-dev
+
+
+Configuring webpack:
+
+1. create file:
+   webpack.config.js
+
+   *const path = require('path')*
+
+2. module.exports = { 
+    different config options:
+
+    1. entry: './src/index.js
+    2. output: {filename: 'bundle.js' 
+       output file will be placed into the path below
+    3. path: path.resolve(__dirname, './dist) <- need absolute path
+    },
+    4. mode: 'none' 
+        mode above can be development or production
+ }
+

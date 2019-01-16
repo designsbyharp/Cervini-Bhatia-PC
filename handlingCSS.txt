@@ -1,0 +1,48 @@
+inside index.js:
+import the css file
+
+npm install install css-loader style-loader --save-dev
+within rules: [
+
+    {
+        test: {
+            /\.css$/,
+            use: [
+                'style-loader', 'css-loader'
+            ]
+        }
+    }
+
+]
+
+sass way:
+
+npm install scss-loader and node-sass --save
+within rules: [
+
+    {
+        test: {
+            /\.scss$/,
+            use: [
+                'style-loader', 'css-loader', 'sass-loader'
+            ]
+        }
+    }
+
+]
+
+but need to use MINICSSEXTRACTPLUGIN:
+
+{
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader'
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+                ]
+            }
+

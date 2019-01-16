@@ -1,0 +1,12 @@
+new HtmlWebpackPlugin({
+            title: 'Hello Webpack 4',
+            template: 'src/test.hbs'
+        })
+
+testing it in webpack.config.js:
+        {
+                test: /\.hbs$/,
+                use: [
+                    'handlebars-loader'
+                ]
+            }

@@ -1,0 +1,8 @@
+ Scripts in package.json:
+
+ 1. build: webpack
+ Example: "build":"webpack"
+
+ Running scripts:
+ npm run build
+
