@@ -1,0 +1,143 @@
+@import "../abstracts/variables";
+
+.cta-btn{
+  padding: 29px 60px;
+  // height: 70px;
+  // width: 260px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  background: none;
+  border: 1px solid white;
+  color: $color-offset--white;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  overflow: hidden;
+  outline:none;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+
+  @include modifier('dark'){
+    border: 1px solid $color-offset--black-2;
+    color: $color-offset--black-2;
+  }
+
+  // @include for-only-tablet-portrait-up {
+  //   font-size: 16px;
+  // }
+
+  // @include for-tablet-landscape-up{
+  //   font-size: 16px;
+  // }
+
+  &:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    background-color: $color-offset--white;
+    transition: all 0.5s cubic-bezier(0.51, 0.18, 0, 0.88);
+    -webkit-transition: all 0.5s cubic-bezier(0.51, 0.18, 0, 0.88);
+    -moz-transition: all 0.5s cubic-bezier(0.51, 0.18, 0, 0.88);
+    -ms-transition: all 0.5s cubic-bezier(0.51, 0.18, 0, 0.88);
+    -o-transition: all 0.5s cubic-bezier(0.51, 0.18, 0, 0.88);
+}  
+
+  &:hover:after{
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+
+  &:hover{
+    color: $color-offset--black-2;
+  }
+  
+  @media screen and (orientation:landscape) and (max-width: 815px) {
+    font-size: 0.9rem;
+  }
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // //button size adjustment for only 600px-768px
+  // @media screen and (min-width: 600px) and (max-width: 768px){
+  //   // padding: .6rem .8rem .6rem 4rem;
+  // }
+
+  //phone landscape font-size
+//   @media screen and (orientation:landscape) and (max-width: 815px) {
+//     font-size: 0.55rem;
+//  }
+
+  // &:hover div:after{
+  //   width:100%;
+  // }
+
+//   @include modifier('not-btn'){
+//     border: none;
+//     padding: 0px 0px 0px 0px;
+//     transition: none;
+//     -webkit-transition: none;
+//     -moz-transition: none;
+//     -ms-transition: none;
+//     -o-transition: none;
+// }
+
+  // @include modifier('no-button'){
+  //   color: $color-offset--white;
+  //   border: none;
+  //   padding: 0px 0px 0px 0px;
+  //   text-transform: capitalize;
+  //   z-index: 3;
+  //   // transition: all .2s ease-out;
+  //   // border: 1px solid  #64666c;
+  //   // overflow: hidden;
+
+  //   .cta-arrow-right{
+  //     position: absolute;
+  //     right: -65px;
+  //     top: -5px;
+  //   }
+  // } 
+
+    // &:hover {
+    //   color: $color-offset--black;
+    // }
+
+
+    // @include modifier('brown'){
+    //   color: $color-offset--brown;
+    // }
+
+    // @include modifier('reverse'){
+    //   &:after{
+    //     top: 0rem;
+    //   }
+    // }
+
+
+

@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/script/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
@@ -18,8 +18,13 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg)$/,
-                use: 'file-loader'
+                test: /\.(png|jpg|jpeg)$/,
+                use: [
+                    'file-loader',
+                    {
+                        loader: "image-webpack-loader"
+                    }
+                ]
             },
             {
                 test: /\.js$/,
@@ -43,21 +48,14 @@ module.exports = {
                 use: [
                     'style-loader', 'css-loader', 'sass-loader'
                 ]
-            },
-            {
-                test: /\.hbs$/,
-                use: [
-                    'handlebars-loader'
-                ]
             }
         ]
     },
     plugins: [
         new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
-            title: 'Hello Webpack 4',
-            template: 'src/tst.hbs',
-            description: 'some description'
+            title: 'Welcome to CB',
+            template: 'index.html'
         })
     ]
 };

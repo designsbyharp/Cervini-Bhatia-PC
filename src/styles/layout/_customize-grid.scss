@@ -1,0 +1,12 @@
+.container-custom{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+
+  @media only screen and(min-width: 767px){
+    width: calc(100% - 90px);
+    max-width: 1600px;
+    padding: 0;
+  }
+}

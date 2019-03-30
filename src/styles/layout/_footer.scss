@@ -1,0 +1,31 @@
+.footer{
+  @include element('link'){
+    display: flex;
+    flex-direction: column;
+
+    .caption, .anchors{
+      font-size: 0.95rem;
+    }
+    .caption{
+      color: $color-offset--dark-grey;
+      text-transform: capitalize;
+      // font-family: $type-font--cormorant-garamond;
+    }
+    .anchors{
+      color: $color-offset--green;
+      margin-bottom: 1.25rem;
+    }
+  }
+  @include element('menu-list'){
+    @include modifier('captions'){
+      margin-right: 20%;
+
+      &:nth-of-type(2){
+        margin-right: 11%;
+      }
+    }
+    @include modifier('anchors'){
+      margin-top: 4px;
+    }
+  }
+}
