@@ -62,7 +62,7 @@ module.exports = {
         new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
             title: 'Hello Webpack 4',
-            template: 'src/tst.hbs',
+            template: './src/index.html',
             description: 'some description'
         }),
         // new HtmlWebpackPlugin({ 2nd page

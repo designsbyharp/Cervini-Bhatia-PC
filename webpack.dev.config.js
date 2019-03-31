@@ -3,13 +3,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
     entry: './src/script/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
         publicPath: ''
     },
-    mode: 'development',
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         index: 'index.html',
@@ -17,6 +17,17 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                use: [{
+                        loader: "html-loader",
+                        options: {
+                            minimize: true
+                        }
+                    }
+
+                ] 
+            },
             {
                 test: /\.(png|jpg|jpeg)$/,
                 use: [
@@ -55,7 +66,8 @@ module.exports = {
         new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
             title: 'Welcome to CB',
-            template: 'index.html'
+            template: "./src/index.html",
+            filename: "./index.html"
         })
     ]
 };
